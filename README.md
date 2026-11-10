@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-CI-Build-Pipeline-Integration/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-CI-Build-Pipeline-Integration?style=flat-square&color=blue" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-CI-Build-Pipeline-Integration/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-CI-Build-Pipeline-Integration?style=flat-square&color=blue" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-CI-Build-Pipeline-Integration/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square" alt="License: MIT" /></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
@@ -63,9 +63,9 @@ The table below lists leading SaaS and hosted CI/CD pipeline integration platfor
 
 The following curated open-source projects power self-hosted CI build pipelines, local workflow verification, containerized orchestration, and automated release engineering.
 
-Sorted in descending order by **GitHub Star Count**:
+Sorted in descending order by **GitHub Stars_Count**:
 
-| 📦 Project | ⭐ Stars | 📝 Description | 🎯 Focus Area |
+| 📦 Project | ⭐ GitHub_Stars | 📝 Description | 🎯 Focus Area |
 |:-----------|:---------|:---------------|:--------------|
 | **[nektos/act](https://github.com/nektos/act)** | [![Stars](https://img.shields.io/github/stars/nektos/act?style=social&color=white)](https://github.com/nektos/act/stargazers) | Run your GitHub Actions workflows locally using Docker to test and debug pipelines without pushing commits or triggering cloud quotas. | 🧪 Local Pipeline Runner |
 | **[harness/drone](https://github.com/harness/drone)** | [![Stars](https://img.shields.io/github/stars/harness/drone?style=social&color=white)](https://github.com/harness/drone/stargazers) | Container-native continuous integration and delivery platform that executes each pipeline step inside an isolated Docker container. | 🐳 Containerized CI Engine |
@@ -144,10 +144,10 @@ We welcome additions, corrections, and updates from the DevOps and software engi
 1. 🍴 **Fork** this repository.
 2. 📝 **Add or update entries** in `README.md` following the table schema:
    - For SaaS products: include official product link, parent company size (valuation/revenue), exact starting price, and specific free tier/trial limits.
-   - For Open-Source projects: include the official repository URL, star count badge (`style=social&color=white` linking to `/stargazers`), and concise description.
+   - For Open-Source projects: include the official repository URL, Stars_Count badge (`style=social&color=white` linking to `/stargazers`), and concise description.
 3. 🔢 Keep the tables **properly sorted**:
    - SaaS table sorted by **Company Size (descending)**.
-   - Open-Source table sorted by **GitHub Stars (descending)**.
+   - Open-Source table sorted by **GitHub_Stars (descending)**.
 4. 🚀 Submit a **Pull Request** with a brief summary of the changes.
 
 ---
