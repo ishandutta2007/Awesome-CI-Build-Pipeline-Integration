@@ -1,73 +1,132 @@
-# Awesome-CI-Build-Pipeline-Integration
+# Awesome CI Build & Pipeline Integration
 
-## Top CI Build & Pipeline Integration Ecosystem
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![GitHub Stars](https://img.shields.io/github/stars/ishandutta2007/Awesome-CI-Build-Pipeline-Integration?style=flat-square&color=blue)](https://github.com/ishandutta2007/Awesome-CI-Build-Pipeline-Integration/stargazers)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/ishandutta2007/Awesome-CI-Build-Pipeline-Integration/pulls)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-*Focused on CI/CD Pipeline Automation, Test Orchestration & Build Integration*  
-**Last updated: March 2026**
+> A curated directory of the best **Continuous Integration (CI) build tools, pipeline automation frameworks, test orchestration platforms, and self-hosted runner ecosystems**.
 
-This repository tracks notable **SaaS platforms** and **open-source projects** for **CI Build & Pipeline Integration**. These tools help development teams embed automated testing, quality gates, and deployment workflows directly into their CI/CD pipelines—covering native CI runners, vendor-specific plugins, and open-source pipeline frameworks.
-
-**Examples** include BrowserStack CI Integrations, Jenkins BrowserStack Plugin, GitHub Actions Runner, GitLab CI Integration, CircleCI Orb, Azure DevOps Task, Bitbucket Pipelines Pipe, TeamCity Plugin, Bamboo Plugin, and Travis CI Addon (the category leaders).
-
-**Open-source emphasis**: This section highlights every major active project for self-hosted CI runners, reusable pipeline workflows, and open-source pipeline frameworks—ideal for DevOps engineers, platform teams, and developers building transparent, vendor-neutral build automation without proprietary lock-in.
-
-Contributions welcome! Open an PR to add/update entries. Keep descriptions factual and link to official sites.
-
-## Table of Contents
-- [SaaS/Hosted Platforms](#saas-products)
-- [Open-Source GitHub Projects](#open-source-github-projects)
-- [How to Contribute](#how-to-contribute)
-- [Disclaimer](#disclaimer)
-
-## SaaS/Hosted Platforms
-
-| Product | Description | Pricing (Starting) | Free Tier / Trial Limits |
-|---------|-------------|-------------------|--------------------------|
-| **[BrowserStack CI Integrations](https://www.browserstack.com/)** | Native integrations across Jenkins, GitHub Actions, Azure DevOps, Bitbucket Pipelines, TeamCity, Bamboo, and Travis CI for running automated tests on BrowserStack's device cloud. Each integration sets environment variables (`BROWSERSTACK_USERNAME`, `BROWSERSTACK_ACCESS_KEY`, `BROWSERSTACK_LOCAL`, `BROWSERSTACK_LOCAL_IDENTIFIER`) and manages Local tunnel setup/teardown automatically [citation:8][citation:15][citation:22]. | Automate Desktop: contact sales for quote (annual billing)  | Free trial available on signup; open-source projects eligible for lifetime free access  |
-| **[Jenkins BrowserStack Plugin](https://plugins.jenkins.io/browserstack-integration/)** | Official Jenkins plugin for managing BrowserStack credentials globally or per build, starting/stopping BrowserStack Local for internal environments, and embedding BrowserStack Automate reports in Jenkins job results. Supports Java (TestNG/JUnit), Node (Protractor/WebdriverIO) [citation:8]. | Free plugin (BrowserStack subscription required for test execution)  | Free to install; BrowserStack account free trial applies  |
-| **[GitHub Actions (BrowserStack Actions)](https://github.com/marketplace/actions/browserstack-actions)** | Library of GitHub Actions including `setup-env` (sets credentials as env vars) and `setup-local` (downloads and starts BrowserStackLocal tunnel). Verified by GitHub as official partner action [citation:15]. | Free action (BrowserStack subscription required)  | Free to use in any GitHub Actions workflow; BrowserStack trial applies  |
-| **[Azure DevOps (BrowserStack Extension)](https://marketplace.visualstudio.com/)** | Azure DevOps extension providing BrowserStack Config and BrowserStack Results tasks. Service connection stores credentials; Config task starts Local tunnel and sets `BROWSERSTACK_BUILD_NAME`; Results task publishes test results to the pipeline [citation:27]. | Free extension (BrowserStack subscription required)  | Free to install; BrowserStack trial applies  |
-| **[Bitbucket Pipelines (BrowserStack)](https://www.browserstack.com/)** | Integration via `bitbucket-pipelines.yml` with BrowserStack credentials stored as secured repository variables. Supports Cypress (`browserstack-cypress-cli`) and Load Testing CLI with artifact upload for JUnit XML reports . | Free tier: ~50 build minutes/month (Bitbucket Free plan); BrowserStack subscription required for test execution  | Bitbucket Free plan: 5 users, 50 build minutes/month  |
-| **[TeamCity BrowserStack Plugin](https://github.com/browserstack/teamcity-plugin)** | TeamCity plugin for storing BrowserStack credentials as environment variables, starting/stopping BrowserStack Local, and displaying a reports tab in build results. Latest v1.0.1 masks access key in UI and HTTP transfers [citation:21]. | Free plugin (BrowserStack subscription required)  | Free to install; BrowserStack trial applies  |
-| **[Bamboo BrowserStack Plugin](https://www.browserstack.com/docs/app-automate/appium/integrations/bamboo)** | Bamboo add-on for configuring BrowserStack credentials centrally, downloading Local binary per platform, and setting environment variables (`BROWSERSTACK_USERNAME`, `BROWSERSTACK_ACCESS_KEY`, `BROWSERSTACK_LOCAL`, `BROWSERSTACK_LOCAL_IDENTIFIER`, `BROWSERSTACK_APP_ID`) for Appium test capabilities [citation:22]. | Free plugin (BrowserStack subscription required)  | Free to install; BrowserStack trial applies  |
-| **[Travis CI BrowserStack Addon](https://docs.travis-ci.com/user/browserstack)** | Native Travis CI addon that automatically sets up BrowserStack Local for testing private servers alongside public URLs. Supports encrypted access keys via `travis encrypt`, app upload (`app_path`), and proxy configuration [citation:23]. | Free for open-source projects; paid plans for private repos (usage-based)  | Free for public repositories; BrowserStack free for open-source projects  |
-| **[CircleCI Orbs (Testing)](https://circleci.com/)** | Pre-built orbs for Cypress, Sauce Labs, LambdaTest, Rainforest QA, Katalon, Happo.io, and others—enabling quick CI/CD setup for browser and mobile testing without custom configuration [citation:5]. | Free tier: 6,000 build credits/month (Linux)  | Free plan: 5 users, 6,000 credits/month, 1 concurrent job  |
-
-## Open-Source GitHub Projects
-
-| Project | Star Badge | Description |
-|---------|------------|-------------|
-| **[ci-matrix-starter](https://github.com/CoderDeltaLAN/ci-matrix-starter)** | [![Stars](https://img.shields.io/github/stars/CoderDeltaLAN/ci-matrix-starter?style=social&color=white)](https://github.com/CoderDeltaLAN/ci-matrix-starter/stargazers) | Lean, production-ready GitHub Actions starter with reusable CI workflows for Python (3.11/3.12) and TypeScript/Node 20. Includes CodeQL out of the box, optional SBOM generation, Dependabot auto-merge, release drafter, and PR labeler. Designed for always-green CI with strict local gates mirroring CI [citation:2]. |
-| **[pygha](https://pypi.org/project/pygha/)** | [![Stars](https://img.shields.io/github/stars/CoderDeltaLAN/pygha?style=social&color=white)](https://github.com/CoderDeltaLAN/pygha/stargazers) | Python-native CI/CD framework for defining, testing, and transpiling pipelines to GitHub Actions. Jobs defined as Python functions with `@job` decorator; supports `depends_on` for sequential stages (lint → build → test → deploy). Transpiles to valid GitHub Actions YAML [citation:13]. |
-
-### Additional Strong Open-Source Options
-
-| Project | Star Badge | Description |
-|---------|------------|-------------|
-| **[RunWright](https://github.com/marketplace/actions/runwright)** | [![Stars](https://img.shields.io/github/stars/runwright/runwright?style=social&color=white)](https://github.com/runwright/runwright/stargazers) | Free, open-source GitHub Action that auto-scales GitHub runners based on actual test load, giving dynamic parallelism with upfront test duration targets [citation:4]. |
-| **[playwright-load-balancer-based-on-changed-files](https://github.com/marketplace/actions/playwright-load-balancer)** | — | Dynamically scales GitHub runners based on test files touched in a PR, then uses Playwright sharding to distribute tests efficiently [citation:4]. |
-| **[playwright-load-balancer-based-on-tests-to-run](https://github.com/marketplace/actions/playwright-load-balancer)** | — | Dynamically scales GitHub runners based on the number of tests to run in a workflow, using Playwright sharding for optimal distribution [citation:4]. |
-| **[BrowserStack Quality Gate](https://github.com/marketplace/actions/browserstack-quality-gate)** | — | Provides quality gate results from BrowserStack Quality Gate API, helping teams deal with flaky and failing tests by providing actionable insights instead of noise [citation:4]. |
-
-**Frameworks for building custom systems**: Combine **ci-matrix-starter** for reusable GitHub Actions workflows, **pygha** for Python-native pipeline definition and testing, and **RunWright** for dynamic parallel test scaling—integrated with BrowserStack or LambdaTest for cloud device execution.
-
-## How to Contribute
-
-1. Fork the repo.
-2. Add/edit entries in `README.md` (follow existing format).
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-4. Submit PR with a short explanation.
-
-Star the repo if you find it useful!
-
-## Disclaimer
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-- CI pipeline integrations handle build credentials and test execution environments; enforce least-privilege access keys and mask secrets in logs.
-- Self-hosted CI runners and open-source pipeline frameworks require regular updates, runner isolation, and secret management to prevent supply-chain attacks.
+Accelerate your delivery lifecycle with modern CI/CD pipeline integrations—spanning enterprise-scale hosted cloud platforms, automated cross-browser test grids, ephemeral runner scaling operators, and container-native build runners.
 
 ---
 
-**Made for DevOps engineers, platform teams, QA architects, and developers building reliable CI/CD pipelines.**  
-Let's make CI build and pipeline integration more open, automatable, and observable.
+## Table of Contents
+
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
+- [SaaS & Hosted CI/CD Platforms](#saas--hosted-cicd-platforms)
+- [Open-Source CI/CD Engines & Pipeline Tools](#open-source-cicd-engines--pipeline-tools)
+- [Architecture & Key Integration Patterns](#architecture--key-integration-patterns)
+- [Frequently Asked Questions (FAQ)](#frequently-asked-questions-faq)
+- [How to Contribute](#how-to-contribute)
+- [License & Disclaimer](#license--disclaimer)
+
+---
+
+## Sector Overview & Market Dynamics
+
+The global **Continuous Integration and Continuous Delivery (CI/CD) and Automated Pipeline Market** is estimated at **$2.5 Billion to $4.0 Billion**, projected to expand at a compound annual growth rate (CAGR) of **18%–22%**, surpassing **$8.5 Billion by 2030**. Growth is propelled by enterprise microservices adoption, developer productivity engineering (DPE), containerized workloads, and automated quality gates.
+
+From a market structure perspective, the sector exhibits **bimodal dynamics**:
+- **Moderately Concentrated at the Platform Layer:** Foundational Git-centric platforms (GitHub Actions, GitLab CI, and Bitbucket Pipelines) demonstrate high consolidation and network effects, capturing the majority of developer mindshare in a near winner-take-most dynamic for source-to-pipeline workflow orchestration.
+- **Highly Fragmented across Execution & Specialized Services:** Parallel test clouds (BrowserStack, Sauce Labs, LambdaTest), ephemeral runner auto-scalers (Kubernetes ARC), local pipeline testing tools (`act`), and container caching engines (`dagger`, `earthly`) remain competitive and diverse, allowing engineering teams to assemble best-of-breed toolchains without platform lock-in.
+
+---
+
+## SaaS & Hosted CI/CD Platforms
+
+The table below lists leading SaaS and hosted CI/CD pipeline integration platforms, sorted in descending order by **Company Size (Market Capitalization or Enterprise Valuation)**.
+
+| Product / Platform | Company Size (Valuation / Revenue) | Starting Price | Free Tier / Trial Limits | Key Pipeline Capabilities |
+|:-------------------|:-----------------------------------|:---------------|:-------------------------|:--------------------------|
+| **[GitHub Actions](https://github.com/features/actions)** | **~$3,100 Billion** ($3.1T Market Cap / $1B+ ARR) | **$4.00 per user/month** (GitHub Team plan; overage Linux compute at $0.008/min) | **2,000 build minutes/month** free forever on private repos (unlimited minutes on public repos) + 500 MB package storage | Fully integrated Git workflow triggers, matrix builds, marketplace ecosystem of 20,000+ actions, self-hosted and hosted runners (Linux, macOS, Windows). |
+| **[Bitbucket Pipelines](https://bitbucket.org/product/features/pipelines)** | **~$45.0 Billion** ($45B Market Cap / ~$4B+ ARR) | **$3.00 per user/month** (Bitbucket Standard; includes 2,500 build minutes/month) | **50 build minutes/month** free forever for up to 5 users + 1 GB Git LFS storage | Built directly into Bitbucket repositories, native Jira issue linking, deployment environments with concurrency controls, and reusable Atlassian Pipes. |
+| **[GitLab CI/CD](https://about.gitlab.com/stages-devops-lifecycle/continuous-integration/)** | **~$8.5 Billion** ($8.5B Market Cap / ~$700M+ ARR) | **$29.00 per user/month** (GitLab Premium; includes 10,000 compute minutes/month) | **400 compute minutes/month** free forever (up to 5 users per namespace) + 5 GB storage | Unified DevOps platform, Auto DevOps pipelines, integrated container registry, dynamic application security testing (DAST), and multi-project pipeline triggers. |
+| **[BrowserStack CI Integrations](https://www.browserstack.com/)** | **$4.0 Billion** (Series B Valuation / ~$200M+ ARR) | **$129.00 per month** (billed annually for Automate Desktop, 1 parallel thread) | **14-day free trial** with **100 automated test minutes** & 1 parallel thread (lifetime free access for approved open-source projects) | Cloud test grid integration for Jenkins, GitHub Actions, GitLab, and Azure DevOps; automated browser/device testing, local tunneling, and flaky test quality gates. |
+| **[CircleCI](https://circleci.com/)** | **$1.7 Billion** (Series F Valuation / ~$100M+ ARR) | **$15.00 per month** (Performance plan base, includes 30,000 credits/month & 5 active users) | **30,000 free credits/month** free forever (~3,000 Linux medium build minutes, max 5 active users, 30 concurrent jobs) | High-speed intelligent test splitting, Docker layer caching, customizable compute resource classes (Arm, GPU, macOS), and reusable reusable Orbs. |
+| **[Sauce Labs](https://saucelabs.com/)** | **~$1.0 Billion** (Private Equity Valuation / ~$150M+ ARR) | **$39.00 per month** (Live Testing billed annually) or **$149.00 per month** (Virtual Device Cloud, 1 parallel thread) | **28-day free trial** with **60 total automated & live testing minutes** and up to 3 parallel virtual machines | Comprehensive mobile app and cross-browser automated testing in CI pipelines, Sauce Connect secure tunneling, failure analysis, and error reporting. |
+| **[Travis CI](https://www.travis-ci.com/)** | **~$500 Million** (Division Valuation under Idera Inc., ~$3.5B EV) | **$69.00 per month** (Core plan, 1 concurrent job, unlimited build minutes) | **30-day free trial** with **10,000 trial credits** (lifetime free access available for approved public open-source repos) | Established multi-language continuous integration service supporting Linux, macOS, and Windows build matrices with automated deployment connectors. |
+| **[LambdaTest](https://www.lambdatest.com/)** | **~$250 Million** (Series C Valuation / TestMu AI) | **$15.00 per user/month** (Live Testing billed annually) or **$99.00 per month** (Web Automation, 1 parallel thread) | **60 live test minutes/month** free forever (6 sessions of 10 min) + **15-day free trial** with **100 automation minutes** | HyperExecute AI-driven test execution engine, parallel Selenium/Cypress/Playwright test suites, smart UI regression testing, and CI pipeline status webhooks. |
+
+---
+
+## Open-Source CI/CD Engines & Pipeline Tools
+
+The following curated open-source projects power self-hosted CI build pipelines, local workflow verification, containerized orchestration, and automated release engineering.
+
+Sorted in descending order by **GitHub Star Count**:
+
+| Project | Stars | Description | Focus Area |
+|:--------|:------|:------------|:-----------|
+| **[nektos/act](https://github.com/nektos/act)** | [![Stars](https://img.shields.io/github/stars/nektos/act?style=social&color=white)](https://github.com/nektos/act/stargazers) | Run your GitHub Actions workflows locally using Docker to test and debug pipelines without pushing commits or triggering cloud quotas. | Local Pipeline Runner |
+| **[harness/drone](https://github.com/harness/drone)** | [![Stars](https://img.shields.io/github/stars/harness/drone?style=social&color=white)](https://github.com/harness/drone/stargazers) | Container-native continuous integration and delivery platform that executes each pipeline step inside an isolated Docker container. | Containerized CI Engine |
+| **[jenkinsci/jenkins](https://github.com/jenkinsci/jenkins)** | [![Stars](https://img.shields.io/github/stars/jenkinsci/jenkins?style=social&color=white)](https://github.com/jenkinsci/jenkins/stargazers) | Industry-standard open-source automation server with thousands of plugins supporting automated build, test, and deployment workflows. | Extensible Automation Server |
+| **[semantic-release/semantic-release](https://github.com/semantic-release/semantic-release)** | [![Stars](https://img.shields.io/github/stars/semantic-release/semantic-release?style=social&color=white)](https://github.com/semantic-release/semantic-release/stargazers) | Fully automated version management and package publishing pipeline tool enforcing Semantic Versioning based on commit messages. | Automated Release & Versioning |
+| **[argoproj/argo-workflows](https://github.com/argoproj/argo-workflows)** | [![Stars](https://img.shields.io/github/stars/argoproj/argo-workflows?style=social&color=white)](https://github.com/argoproj/argo-workflows/stargazers) | Container-native workflow engine for orchestrating parallel CI/CD jobs and machine learning pipelines natively on Kubernetes clusters. | Kubernetes Workflow Engine |
+| **[dagger/dagger](https://github.com/dagger/dagger)** | [![Stars](https://img.shields.io/github/stars/dagger/dagger?style=social&color=white)](https://github.com/dagger/dagger/stargazers) | Programmable CI/CD engine that lets developers construct pipelines as code in Python, Go, or TypeScript and run them anywhere (local or CI). | Programmable Pipeline Engine |
+| **[hadolint/hadolint](https://github.com/hadolint/hadolint)** | [![Stars](https://img.shields.io/github/stars/hadolint/hadolint?style=social&color=white)](https://github.com/hadolint/hadolint/stargazers) | Smarter Dockerfile linter that validates Dockerfiles against best practice rules to guarantee efficient and secure CI container builds. | Container Linting & Quality Gate |
+| **[earthly/earthly](https://github.com/earthly/earthly)** | [![Stars](https://img.shields.io/github/stars/earthly/earthly?style=social&color=white)](https://github.com/earthly/earthly/stargazers) | Fast, reproducible, container-isolated build framework that combines Makefile simplicity with Docker isolation to eliminate CI flakes. | Reproducible Build System |
+| **[reviewdog/reviewdog](https://github.com/reviewdog/reviewdog)** | [![Stars](https://img.shields.io/github/stars/reviewdog/reviewdog?style=social&color=white)](https://github.com/reviewdog/reviewdog/stargazers) | Automated code review utility that consumes linter outputs and posts diff annotations directly to pull requests across GitHub, GitLab, and Bitbucket. | Automated PR Code Review |
+| **[tektoncd/pipeline](https://github.com/tektoncd/pipeline)** | [![Stars](https://img.shields.io/github/stars/tektoncd/pipeline?style=social&color=white)](https://github.com/tektoncd/pipeline/stargazers) | Cloud-native Kubernetes-standard CRD framework for declaring and executing modular, reusable continuous integration pipelines. | Kubernetes-Native Pipeline CRDs |
+| **[woodpecker-ci/woodpecker](https://github.com/woodpecker-ci/woodpecker)** | [![Stars](https://img.shields.io/github/stars/woodpecker-ci/woodpecker?style=social&color=white)](https://github.com/woodpecker-ci/woodpecker/stargazers) | Lightweight, community-governed CI engine fork of Drone that executes pipelines in containers with native multi-architecture support. | Lightweight Self-Hosted CI |
+| **[concourse/concourse](https://github.com/concourse/concourse)** | [![Stars](https://img.shields.io/github/stars/concourse/concourse?style=social&color=white)](https://github.com/concourse/concourse/stargazers) | Open-source CI/CD system built on declarative resources, tasks, and visual pipeline graphs designed for stateless infrastructure. | Declarative Pipeline Automation |
+| **[actions/actions-runner-controller](https://github.com/actions/actions-runner-controller)** | [![Stars](https://img.shields.io/github/stars/actions/actions-runner-controller?style=social&color=white)](https://github.com/actions/actions-runner-controller/stargazers) | Kubernetes operator (ARC) that dynamically provisions and auto-scales self-hosted GitHub Actions runners based on real-time queue demand. | Autoscaling Runner Operator |
+| **[actions/runner](https://github.com/actions/runner)** | [![Stars](https://img.shields.io/github/stars/actions/runner?style=social&color=white)](https://github.com/actions/runner/stargazers) | Official cross-platform runner application executing workflow jobs for GitHub Actions on Linux, macOS, and Windows hosts. | Core Workflow Runner |
+| **[rhysd/actionlint](https://github.com/rhysd/actionlint)** | [![Stars](https://img.shields.io/github/stars/rhysd/actionlint?style=social&color=white)](https://github.com/rhysd/actionlint/stargazers) | Fast static analysis linter for GitHub Actions workflow files (`.github/workflows/*.yml`) to catch syntax bugs and expression errors early. | Workflow Static Analysis |
+
+---
+
+## Architecture & Key Integration Patterns
+
+A resilient and high-throughput CI/CD pipeline typically implements five foundational architectural layers:
+
+```mermaid
+flowchart LR
+    A["Developer Commit / PR"] --> B["Local Gate & Validation<br/>(act, actionlint, hadolint)"]
+    B --> C["Pipeline Orchestrator<br/>(GitHub Actions / GitLab CI)"]
+    C --> D["Dynamic Compute Runner<br/>(ARC Kubernetes / Ephemeral VM)"]
+    D --> E["Distributed Test Cloud<br/>(BrowserStack, Sauce Labs, LambdaTest)"]
+    E --> F["Automated Release & Deploy<br/>(semantic-release, Argo Workflows)"]
+```
+
+1. **Local Pre-Flight Validation:** Run workflow linters ([`actionlint`](https://github.com/rhysd/actionlint)) and containerized pipeline emulators ([`act`](https://github.com/nektos/act)) before pushing code to avoid wasting remote compute minutes.
+2. **Deterministic Build Caching:** Leverage containerized build frameworks ([`dagger`](https://github.com/dagger/dagger), [`earthly`](https://github.com/earthly/earthly)) with multi-layer caching to ensure identical build outcomes locally and in CI.
+3. **Dynamic Autoscaling Runners:** Deploy Kubernetes-native runner controllers ([`actions-runner-controller`](https://github.com/actions/actions-runner-controller)) to automatically scale ephemeral compute nodes up and down based on queue depth, reducing hosting costs.
+4. **Cloud Test Sharding:** Offload browser, mobile, and regression matrix test suites to parallelized execution clouds ([BrowserStack](https://www.browserstack.com/), [LambdaTest](https://www.lambdatest.com/), [Sauce Labs](https://saucelabs.com/)) with automated secure tunneling.
+5. **Zero-Touch Releases:** Automate semantic version calculation, changelog generation, and tag publication using [`semantic-release`](https://github.com/semantic-release/semantic-release) upon successful merge to the main branch.
+
+---
+
+## Frequently Asked Questions (FAQ)
+
+### What is CI Build & Pipeline Integration?
+CI Build & Pipeline Integration refers to connecting version control repositories (Git) with automated runners, compilers, linters, test grids, and deployment pipelines. Every code commit triggers an automated sequence that builds artifacts, validates tests, enforces security compliance, and reports status back to pull requests.
+
+### Should I choose a hosted SaaS CI or self-hosted open-source runners?
+- **Choose Hosted SaaS (GitHub Actions, GitLab CI, CircleCI)** for minimal operational overhead, zero infrastructure maintenance, instant global runner pools, and turnkey marketplace integrations.
+- **Choose Self-Hosted Open-Source (Actions Runner Controller, Jenkins, Woodpecker, Drone)** if you require strict data sovereignty, specialized on-premise hardware (e.g., custom GPUs, internal network access), or want to optimize compute costs for high-volume builds.
+
+### How do I eliminate flaky tests in CI pipelines?
+Utilize test sharding, dynamic retry mechanisms, isolated container environments with [`earthly`](https://github.com/earthly/earthly), and automated quality gate integrations (e.g., BrowserStack or Sauce Labs) that quarantine failing tests and separate genuine code regressions from environmental flakes.
+
+---
+
+## How to Contribute
+
+We welcome additions, corrections, and updates from the DevOps and software engineering community!
+
+1. **Fork** this repository.
+2. **Add or update entries** in `README.md` following the table schema:
+   - For SaaS products: include official product link, parent company size (valuation/revenue), exact starting price, and specific free tier/trial limits.
+   - For Open-Source projects: include the official repository URL, star count badge (`style=social&color=white` linking to `/stargazers`), and concise description.
+3. Keep the tables **properly sorted**:
+   - SaaS table sorted by **Company Size (descending)**.
+   - Open-Source table sorted by **GitHub Stars (descending)**.
+4. Submit a **Pull Request** with a brief summary of the changes.
+
+---
+
+## License & Disclaimer
+
+- Distributed under the [MIT License](file:///C:/Users/ishan/Documents/Projects/Awesome-CI-Build-Pipeline-Integration/LICENSE).
+- This list is community-curated for informational purposes. Product names, logos, and brands are property of their respective owners. Always review security practices, access permissions, and secret management policies when configuring CI/CD pipelines.
