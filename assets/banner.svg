@@ -1,0 +1,229 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400" style="background:#090d16; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a12" />
+      <stop offset="50%" stop-color="#0c1322" />
+      <stop offset="100%" stop-color="#0a101d" />
+    </linearGradient>
+
+    <linearGradient id="accentCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="60%" stop-color="#f0f9ff" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <linearGradient id="pillGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95" />
+    </linearGradient>
+
+    <linearGradient id="pulseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="1" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.5" />
+    </pattern>
+
+    <!-- Drop Shadows & Glow Filters -->
+    <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="glowPurple" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.7" />
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulseOrb {
+      0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.35; }
+      50% { transform: scale(1.15) translate(10px, -15px); opacity: 0.65; }
+    }
+    @keyframes pulseOrb2 {
+      0%, 100% { transform: scale(1.1) translate(0, 0); opacity: 0.3; }
+      50% { transform: scale(0.9) translate(-15px, 10px); opacity: 0.55; }
+    }
+    @keyframes flowLine {
+      0% { stroke-dashoffset: 1000; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes packetMove {
+      0% { offset-distance: 0%; opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { offset-distance: 100%; opacity: 0; }
+    }
+    @keyframes blinkDot {
+      0%, 100% { opacity: 0.3; transform: scale(0.85); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+    @keyframes floatCard {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+    .orb1 { animation: pulseOrb 8s ease-in-out infinite; transform-origin: 250px 150px; }
+    .orb2 { animation: pulseOrb2 10s ease-in-out infinite; transform-origin: 950px 220px; }
+    .pipeline-line { stroke-dasharray: 8 6; animation: flowLine 30s linear infinite; }
+    .status-dot { animation: blinkDot 2.5s ease-in-out infinite; transform-origin: center; }
+    .floating-box { animation: floatCard 6s ease-in-out infinite; }
+  </style>
+
+  <!-- Base Canvas Background -->
+  <rect width="1200" height="400" fill="url(#bgGrad)" />
+  <rect width="1200" height="400" fill="url(#grid)" />
+
+  <!-- DYNAMIC BACKGROUND LAYER: Glowing Orbs -->
+  <g id="dynamic-orbs">
+    <circle class="orb1" cx="220" cy="140" r="180" fill="#0284c7" filter="url(#glowPurple)" />
+    <circle class="orb2" cx="980" cy="240" r="170" fill="#6366f1" filter="url(#glowPurple)" />
+    <circle cx="600" cy="380" r="160" fill="#38bdf8" opacity="0.12" filter="url(#glowCyan)" />
+  </g>
+
+  <!-- DYNAMIC BACKGROUND LAYER: Animated CI/CD Pipeline Architecture Flow -->
+  <g id="dynamic-pipeline-flow" opacity="0.65">
+    <!-- Pipeline Connecting Paths -->
+    <path class="pipeline-line" d="M 120,330 L 330,330 L 410,290 L 590,290 L 670,330 L 870,330 L 950,290 L 1080,290" 
+          fill="none" stroke="#38bdf8" stroke-width="2.5" opacity="0.7" />
+    <path class="pipeline-line" d="M 180,330 L 330,330 L 410,360 L 590,360 L 670,330 L 870,330 L 950,360 L 1080,360" 
+          fill="none" stroke="#818cf8" stroke-width="2" opacity="0.5" />
+
+    <!-- Animated Data Packets along the tracks -->
+    <circle r="4" fill="#38bdf8" filter="url(#glowCyan)">
+      <animateMotion path="M 120,330 L 330,330 L 410,290 L 590,290 L 670,330 L 870,330 L 950,290 L 1080,290" dur="6s" repeatCount="indefinite" />
+    </circle>
+    <circle r="4" fill="#c084fc" filter="url(#glowCyan)">
+      <animateMotion path="M 180,330 L 330,330 L 410,360 L 590,360 L 670,330 L 870,330 L 950,360 L 1080,360" dur="7.5s" begin="1.5s" repeatCount="indefinite" />
+    </circle>
+    <circle r="3.5" fill="#34d399" filter="url(#glowCyan)">
+      <animateMotion path="M 120,330 L 330,330 L 410,290 L 590,290 L 670,330 L 870,330 L 950,290 L 1080,290" dur="6s" begin="3s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Pipeline Stage Nodes (Background) -->
+    <!-- Node 1: Code & Lint -->
+    <g transform="translate(100, 310)">
+      <rect width="80" height="38" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.5" />
+      <circle cx="16" cy="19" r="4.5" fill="#38bdf8" />
+      <text x="30" y="23" font-size="11" font-weight="600" fill="#94a3b8" letter-spacing="0.5">LINT</text>
+    </g>
+
+    <!-- Node 2: Matrix Build -->
+    <g transform="translate(370, 271)">
+      <rect width="90" height="38" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5" />
+      <circle class="status-dot" cx="16" cy="19" r="4.5" fill="#22c55e" />
+      <text x="30" y="23" font-size="11" font-weight="600" fill="#e2e8f0" letter-spacing="0.5">BUILD</text>
+    </g>
+
+    <!-- Node 3: Test Grid -->
+    <g transform="translate(630, 310)">
+      <rect width="90" height="38" rx="8" fill="#0f172a" stroke="#818cf8" stroke-width="1.5" />
+      <circle class="status-dot" cx="16" cy="19" r="4.5" fill="#818cf8" />
+      <text x="30" y="23" font-size="11" font-weight="600" fill="#e2e8f0" letter-spacing="0.5">TEST</text>
+    </g>
+
+    <!-- Node 4: Quality Gate -->
+    <g transform="translate(910, 271)">
+      <rect width="90" height="38" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.5" />
+      <circle cx="16" cy="19" r="4.5" fill="#f59e0b" />
+      <text x="28" y="23" font-size="11" font-weight="600" fill="#94a3b8" letter-spacing="0.5">GATE</text>
+    </g>
+
+    <!-- Node 5: Deploy -->
+    <g transform="translate(1040, 310)">
+      <rect width="90" height="38" rx="8" fill="#0f172a" stroke="#22c55e" stroke-width="1.5" />
+      <circle cx="16" cy="19" r="4.5" fill="#22c55e" />
+      <text x="28" y="23" font-size="11" font-weight="600" fill="#4ade80" letter-spacing="0.5">DEPLOY</text>
+    </g>
+  </g>
+
+  <!-- Subtle Top Decorative Runner Pills -->
+  <g id="top-runner-pills" opacity="0.8" class="floating-box">
+    <!-- Runner Pill 1 -->
+    <g transform="translate(80, 42)">
+      <rect width="180" height="30" rx="15" fill="#0f172a" stroke="#1e293b" stroke-width="1.2" />
+      <circle class="status-dot" cx="18" cy="15" r="4" fill="#22c55e" />
+      <text x="32" y="19" font-size="11" font-weight="600" fill="#cbd5e1">GitHub Actions Runner</text>
+    </g>
+    <!-- Runner Pill 2 -->
+    <g transform="translate(280, 42)">
+      <rect width="165" height="30" rx="15" fill="#0f172a" stroke="#1e293b" stroke-width="1.2" />
+      <circle cx="18" cy="15" r="4" fill="#38bdf8" />
+      <text x="32" y="19" font-size="11" font-weight="600" fill="#cbd5e1">Kubernetes ARC</text>
+    </g>
+    <!-- Runner Pill 3 -->
+    <g transform="translate(960, 42)">
+      <rect width="160" height="30" rx="15" fill="#0f172a" stroke="#1e293b" stroke-width="1.2" />
+      <circle class="status-dot" cx="18" cy="15" r="4" fill="#c084fc" />
+      <text x="32" y="19" font-size="11" font-weight="600" fill="#cbd5e1">BrowserStack Grid</text>
+    </g>
+  </g>
+
+  <!-- ============================================================== -->
+  <!-- FOREGROUND LAYER: STRICTLY IN FOREGROUND & PROTECTED FROM OVERLAP -->
+  <!-- ============================================================== -->
+  <g id="foreground" filter="url(#shadow)">
+    <!-- Category Badge -->
+    <g transform="translate(450, 88)">
+      <rect width="300" height="32" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.8" />
+      <circle cx="20" cy="16" r="4.5" fill="#38bdf8">
+        <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <text x="34" y="21" font-size="12" font-weight="700" fill="#38bdf8" letter-spacing="1.2">DEVOPS &amp; CI/CD ECOSYSTEM</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="600" y="162" text-anchor="middle" font-size="44" font-weight="900" fill="url(#textGrad)" letter-spacing="-0.5">
+      Awesome CI Build &amp; Pipeline Integration
+    </text>
+
+    <!-- Subtitle / Tagline -->
+    <text x="600" y="198" text-anchor="middle" font-size="17" font-weight="400" fill="#94a3b8" letter-spacing="0.2">
+      Curated Directory of CI/CD Platforms, Pipeline Automation, Ephemeral Runners &amp; Test Grids
+    </text>
+
+    <!-- Feature Tags Pill Row -->
+    <g transform="translate(195, 222)">
+      <!-- Pill 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="145" height="28" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1" />
+        <text x="72" y="18" text-anchor="middle" font-size="11" font-weight="600" fill="#e2e8f0">⚡ Matrix Builds</text>
+      </g>
+      <!-- Pill 2 -->
+      <g transform="translate(160, 0)">
+        <rect width="165" height="28" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1" />
+        <text x="82" y="18" text-anchor="middle" font-size="11" font-weight="600" fill="#e2e8f0">📦 Ephemeral Runners</text>
+      </g>
+      <!-- Pill 3 -->
+      <g transform="translate(340, 0)">
+        <rect width="155" height="28" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1" />
+        <text x="77" y="18" text-anchor="middle" font-size="11" font-weight="600" fill="#e2e8f0">🌐 Test Cloud Grids</text>
+      </g>
+      <!-- Pill 4 -->
+      <g transform="translate(510, 0)">
+        <rect width="150" height="28" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1" />
+        <text x="75" y="18" text-anchor="middle" font-size="11" font-weight="600" fill="#e2e8f0">🛠️ Pipeline as Code</text>
+      </g>
+      <!-- Pill 5 -->
+      <g transform="translate(675, 0)">
+        <rect width="135" height="28" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1" />
+        <text x="67" y="18" text-anchor="middle" font-size="11" font-weight="600" fill="#e2e8f0">🚀 Quality Gates</text>
+      </g>
+    </g>
+  </g>
+</svg>
